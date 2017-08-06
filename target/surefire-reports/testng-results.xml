@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="160691" started-at="2017-08-04T08:04:27Z" finished-at="2017-08-04T08:07:08Z">
+    <groups>
+    </groups>
+    <test name="Test1" duration-ms="55222" started-at="2017-08-04T08:04:27Z" finished-at="2017-08-04T08:05:23Z">
+      <class name="test.LoginPageTest">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:test.LoginPageTest@177515d1]" name="openBrowser" is-config="true" duration-ms="54357" started-at="2017-08-04T13:34:27Z" finished-at="2017-08-04T13:35:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="FAIL" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:test.LoginPageTest@177515d1]" name="loginFunc" duration-ms="175" started-at="2017-08-04T13:35:22Z" data-provider="getCredentails" finished-at="2017-08-04T13:35:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunaina@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Command duration or timeout: 25 milliseconds]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Command duration or timeout: 25 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:509)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy16.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:288)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:285)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:209)
+	at core.ActionDriver.waitForElement(ActionDriver.java:20)
+	at core.ActionDriver.isElementPresent(ActionDriver.java:50)
+	at pages.HomePage.<init>(HomePage.java:18)
+	at test.LoginPageTest.loginFunc(LoginPageTest.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchSessionException: Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'XE-T-DEEPAKS', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="FAIL" signature="closeBrowser()[pri:0, instance:test.LoginPageTest@177515d1]" name="closeBrowser" is-config="true" duration-ms="31" started-at="2017-08-04T13:35:23Z" finished-at="2017-08-04T13:35:23Z">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Command duration or timeout: 30 milliseconds]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Command duration or timeout: 30 milliseconds
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:533)
+	at core.OpenAndCloseBrowser.closeBrowser(OpenAndCloseBrowser.java:103)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:212)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchSessionException: Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: '9c627fda97ea', ip: '172.17.0.3', os.name: 'Linux', os.arch: 'amd64', os.version: '4.9.36-moby', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'XE-T-DEEPAKS', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: unknown
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.LoginPageTest -->
+    </test> <!-- Test1 -->
+    <test name="Test2" duration-ms="160690" started-at="2017-08-04T08:04:27Z" finished-at="2017-08-04T08:07:08Z">
+      <class name="test.LoginPageTest2">
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:test.LoginPageTest2@514de325]" name="openBrowser" is-config="true" duration-ms="115267" started-at="2017-08-04T13:34:27Z" finished-at="2017-08-04T13:36:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="FAIL" signature="loginFunc(java.lang.String, java.lang.String)[pri:0, instance:test.LoginPageTest2@514de325]" name="loginFunc" duration-ms="43819" started-at="2017-08-04T13:36:23Z" data-provider="getCredentails" finished-at="2017-08-04T13:37:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sunaina@test.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected: failed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected: failed
+	at test.LoginPageTest2.loginFunc(LoginPageTest2.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:414)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFunc -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:test.LoginPageTest2@514de325]" name="closeBrowser" is-config="true" duration-ms="82" started-at="2017-08-04T13:37:08Z" finished-at="2017-08-04T13:37:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.LoginPageTest2 -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
