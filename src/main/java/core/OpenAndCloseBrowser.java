@@ -34,13 +34,12 @@ public class OpenAndCloseBrowser {
 	
 	
 	@BeforeClass
-	@Parameters({"grid"})
-	public void openBrowser(String grid) throws MalformedURLException{
+	public void openBrowser() throws MalformedURLException{
 		
 		if(projectProperty.getPropertyFromGlobalHashmap("browser").equalsIgnoreCase("chrome")){
-			configureChrome(grid);
+			configureChrome();
 		}else if(projectProperty.getPropertyFromGlobalHashmap("browser").equalsIgnoreCase("firefox")){
-			configureFirefox(grid);
+			configureFirefox();
 		}
 		
 		driver.manage().window().maximize();
@@ -50,20 +49,9 @@ public class OpenAndCloseBrowser {
 	
 	}
 	
-	@Parameters({"grid"})
-	private void configureFirefox(String grid) throws MalformedURLException {
-		if(grid.equalsIgnoreCase("yes")){
-		if(currentOS.toLowerCase().contains("windows")){
-			System.setProperty("webdriver.chrome.driver", ProjectProperty.ffDriverPathForWindows);
-			caps.setPlatform(Platform.WINDOWS);
-			caps= DesiredCapabilities.firefox();
-		}else if(currentOS.toLowerCase().contains("mac")){
-			System.setProperty("webdriver.chrome.driver", ProjectProperty.ffDriverPathForMac);
-			caps.setPlatform(Platform.WINDOWS);
-			caps= DesiredCapabilities.firefox();
-		}
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),caps);
-		}else{
+	
+	private void configureFirefox() throws MalformedURLException {
+		
 			if(currentOS.toLowerCase().contains("windows")){
 				System.setProperty("webdriver.chrome.driver", ProjectProperty.ffDriverPathForWindows);
 			}else if(currentOS.toLowerCase().contains("mac")){
@@ -71,23 +59,12 @@ public class OpenAndCloseBrowser {
 			}
 			driver = new FirefoxDriver();
 			
-		}
+		
 	}
 	
 	
-	private void configureChrome(String grid) throws MalformedURLException {
-		if(grid.equalsIgnoreCase("yes")){
-		if(currentOS.toLowerCase().contains("windows")){
-			System.setProperty("webdriver.chrome.driver", ProjectProperty.chromeDriverPathForWindows);
-
-			caps= DesiredCapabilities.chrome();
-		}else if(currentOS.toLowerCase().contains("mac")){
-			System.setProperty("webdriver.chrome.driver", ProjectProperty.chromeDriverPathForMac);
-			caps.setPlatform(Platform.WINDOWS);
-			caps= DesiredCapabilities.chrome();
-		}
-		driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),caps);
-		}else{
+	private void configureChrome() throws MalformedURLException {
+		
 			if(currentOS.toLowerCase().contains("windows")){
 				System.setProperty("webdriver.chrome.driver", ProjectProperty.chromeDriverPathForWindows);
 			}else if(currentOS.toLowerCase().contains("mac")){
@@ -96,7 +73,7 @@ public class OpenAndCloseBrowser {
 			driver = new ChromeDriver();
 			
 		}
-	}
+	
 
 	@AfterClass
 	public void closeBrowser(){
